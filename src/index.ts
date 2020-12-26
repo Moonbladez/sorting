@@ -1,6 +1,7 @@
 import { Sorter } from "./Sorter";
 import { NumbersCollection } from "./NumbersCollection";
 import { CharactersCollection } from "./CharacterCollection";
+import { LinkedList } from "./LinkedList";
 
 // const numbersCollection = new NumbersCollection([10, 3, -5, 8, 50, 0, -100]);
 // const sorter = new Sorter(numbersCollection);
@@ -8,8 +9,19 @@ import { CharactersCollection } from "./CharacterCollection";
 
 // console.log(numbersCollection.data);
 
-const charactersCollection = new CharactersCollection("This Is My New String!");
-const sorter = new Sorter(charactersCollection);
+// const charactersCollection = new CharactersCollection("This Is My New String!");
+// const sorter = new Sorter(charactersCollection);
 
+// sorter.sort();
+// console.log(charactersCollection.data);
+
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(3);
+linkedList.add(-3);
+linkedList.add(4);
+
+const sorter = new Sorter(linkedList);
 sorter.sort();
-console.log(charactersCollection.data);
+linkedList.print();
